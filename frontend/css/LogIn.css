@@ -51,14 +51,14 @@ button:hover {
     margin-top: 10px;
     font-size: 14px;
 }
-
+/*imagen grande inicio de seccion */
 body {
-    background: url('../img/in_vitro.png') no-repeat left center fixed;
+    background: url('../img/in_vitro1.png') no-repeat left center fixed;
     background-size: contain; /* Mantiene la imagen ajustada */
     display: flex;
     justify-content: flex-end; /* Mueve el formulario a la derecha */
     align-items: center;
     height: 100vh;
-    margin: 0;
+    margin: 15;
     padding-right: 5%; /* Espacio a la derecha para el formulario */
 }
