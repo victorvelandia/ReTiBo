@@ -7,18 +7,8 @@
   <link rel="stylesheet" href="css/estilos.css" />
 </head>
 <body>
-  <header>
-    <h1>🐄 RETIBO</h1>
-    <nav>
-      <ul class="nav-list">
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#subir">Subir Nota</a></li>
-        <li><a href="#ver">Ver Notas</a></li>
-        <li><a href="login.html">Iniciar Sesión</a></li> 
-      </ul>
-    </nav>
-  </header>
-
+  
+<?php include 'menu.php';?>
   <main>
     <section id="inicio" class="section">
       <h2>Bienvenido a RETIBO</h2>
@@ -44,9 +34,8 @@
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 RETIBO. Cuidando tus vacas, nota por nota 🐄</p>
-  </footer>
+ 
+  <?php include 'footer.php';?>
 
   <script src="js/java.js"></script>
 </body>
