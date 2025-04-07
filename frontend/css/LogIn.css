@@ -60,5 +60,5 @@ body {
     align-items: center;
     height: 100vh;
     margin: 15;
-    padding-right: 5%; /* Espacio a la derecha para el formulario */
+    padding-right: 2rem; /* Espacio a la derecha para el formulario */
 }

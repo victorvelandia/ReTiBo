@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -34,6 +35,10 @@
     <ul id="listaRegistros"></ul>
   </div>
   <?php include 'footer.php';?>
+  <script src="js/seguridad.js"></script>
+
   <script src="js/record.js"></script>
 </body>
 </html>
+
+
