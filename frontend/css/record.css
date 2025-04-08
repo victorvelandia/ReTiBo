@@ -1,111 +1,78 @@
-  
 /* Reset básico */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  /* Tipografía y fondo */
-  body {
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #f0f9f2;
-    color: #2f4f2f;
-    line-height: 1.6;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  header {
-    background-color: #4caf50;
-    color: white;
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-  }
+/* Tipografía y fondo */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f0f9f2;
+  color: #2f4f2f;
+  line-height: 1.6;
+}
 
-  .nav-list {
-    list-style: none;
-    display: flex;
-    gap: 1.5rem;
-  }
-  
-  .nav-list a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    transition: opacity 0.3s;
-  }
-  
-  .nav-list a:hover {
-    opacity: 0.8;
-  }
+/* Contenedor principal */
+.container {
+  max-width: 600px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
 
-  .container {
-    max-width: 600px;
-    margin: auto;
-    background: white;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  }
-  
-  h2 {
-    text-align: center;
-    color: #333;
-  }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  label {
-    display: flex;
-    flex-direction: column;
-    font-weight: bold;
-  }
-  
-  input, textarea, button {
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-  }
-  
-  button {
-    background-color: #28a745;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #218838;
-  }
-  
-  #listaRegistros {
-    margin-top: 20px;
-    list-style: none;
-    padding: 0;
-  }
-  
-  #listaRegistros li {
-    background: #e9f5e9;
-    border-left: 4px solid #28a745;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 6px;
-  }
+h2 {
+  text-align: center;
+  color: #333;
+}
 
-  /* Footer */
-footer {
-    background-color: #388e3c;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
-  }
-  
+/* Formularios */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+}
+
+input,
+textarea,
+button {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+button {
+  background-color: #28a745;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+/* Lista de registros */
+#listaRegistros {
+  margin-top: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+#listaRegistros li {
+  background: #e9f5e9;
+  border-left: 4px solid #28a745;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+}
+
+

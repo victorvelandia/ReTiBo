@@ -1,11 +1,13 @@
 body {
     font-family: Arial, sans-serif;
+    background: url('../img/in_vitro1.png') no-repeat left center fixed;
+    background-size: contain;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(to right, #6a11cb, #2575fc);
     margin: 0;
+    padding-right: 2rem;
 }
 
 /* Contenedor del formulario */
@@ -28,6 +30,16 @@ input {
     border-radius: 5px;
 }
 
+/* Select */
+select {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
 /* Botón de acción */
 button {
     background: #28a745;
@@ -45,20 +57,25 @@ button:hover {
     background: #218838;
 }
 
+/* Estilo para los botones tipo enlace */
+.link-button {
+    background: none;
+    border: none;
+    padding: 0;
+    color: #007bff;
+    text-decoration: underline;
+    cursor: pointer;
+    font: inherit;
+}
+
+.link-button:hover {
+    opacity: 0.8;
+}
+
 /* Mensaje de error */
-#error {
+#error,
+#register-error {
     color: red;
     margin-top: 10px;
     font-size: 14px;
-}
-/*imagen grande inicio de seccion */
-body {
-    background: url('../img/in_vitro1.png') no-repeat left center fixed;
-    background-size: contain; /* Mantiene la imagen ajustada */
-    display: flex;
-    justify-content: flex-end; /* Mueve el formulario a la derecha */
-    align-items: center;
-    height: 100vh;
-    margin: 15;
-    padding-right: 2rem; /* Espacio a la derecha para el formulario */
 }

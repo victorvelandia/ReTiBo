@@ -1,4 +1,10 @@
 
+<?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -8,7 +14,7 @@
    <link rel="stylesheet" href="css/tutorials.css" />
 </head>
 <body>
-<?php include 'menu.php';?>
+<?php include_once 'menu.php';?>
   <main>
     <section class="temas">
       <h2>Temas Disponibles</h2>
@@ -35,8 +41,8 @@
     </section>
   </main>
 
-  <?php include 'footer.php';?>
-  <script src="js/seguridad.js"></script>
+  <?php include_once 'footer.php';?>
+  <script src="js/security.js"></script>
 
   <script src="js/tutorials.js"></script>
 </body>

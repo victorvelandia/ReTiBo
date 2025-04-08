@@ -1,0 +1,20 @@
+# Ignorar archivos de entorno y config sensibles
+.env
+/vendor/ 
+
+# Ignorar archivos con credenciales
+Backend/api/conexion.php
+
+# Ignorar carpetas y archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Ignorar archivos del editor
+.vscode/
+*.code-workspace
+
+# Node (si llegas a usar Node.js)
+node_modules/
+
+# Composer (si usas PHP con Composer)
+vendor/

@@ -1,7 +1,7 @@
 <?php
 header("Content-Type: application/json");
 session_start();
-include 'conexion.php';
+include_once 'conexion.php';
 
 $data = json_decode(file_get_contents("php://input"), true);
 $username = $conn->real_escape_string($data['username']);
@@ -24,4 +24,4 @@ if ($result && $result->num_rows === 1) {
 }
 
 $conn->close();
-?>
+

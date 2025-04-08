@@ -1,7 +1,7 @@
 <?php
 
 header("Content-Type: application/json");
-include 'conexion.php';
+include_once 'conexion.php';
 
 $data = json_decode(file_get_contents("php://input"), true);
 
@@ -25,8 +25,7 @@ $rol_id = intval($data['rol_id']);
 $ubicacion_id = intval($data['ubicacion_id']);
 
 // Preparar la consulta (más seguro que insertar directo)
-$sql = "INSERT INTO usuarios (nombre, apellido, cedula, email, username, password, rol_id, ubicacion_id) 
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+$sql = "INSERT INTO usuarios (nombre, apellido, cedula, email, username, password, rol_id, ubicacion_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
 
 $stmt = $conn->prepare($sql);
 if (!$stmt) {
@@ -46,4 +45,4 @@ if ($stmt->execute()) {
 
 $stmt->close();
 $conn->close();
-?>
+

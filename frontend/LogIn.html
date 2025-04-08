@@ -15,7 +15,9 @@
         <input type="password" id="password" placeholder="Contraseña">
         <button onclick="login()">Ingresar</button>
         <p id="error"></p>
-        <p>¿No tienes cuenta? <a href="#" onclick="showRegister()">Regístrate</a></p>
+        <p>¿No tienes cuenta? 
+            <button type="button" class="link-button" onclick="showRegister()">Regístrate</button>
+        </p>
     </div>
     
     <!-- Registro -->
@@ -40,14 +42,16 @@
 
         <button onclick="register()">Registrarse</button>
         <p id="register-error"></p>
-        <p>¿Ya tienes cuenta? <a href="#" onclick="showLogin()">Inicia sesión</a></p>
+        <p>¿Ya tienes cuenta? 
+            <button type="button" class="link-button" onclick="showLogin()">Inicia sesión</button>
+        </p>
     </div>
 
     <!-- Script para cargar roles y ubicaciones -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // Cargar roles
-            fetch('api/load_roles.php')
+            fetch('../Backend/api/load_roles.php')
                 .then(response => response.json())
                 .then(data => {
                     const rolSelect = document.getElementById('rol');
@@ -62,7 +66,7 @@
                 .catch(error => console.error('Error cargando roles:', error));
 
             // Cargar ubicaciones
-            fetch('api/load_ubicaciones.php')
+            fetch('../Backend/api/load_ubicaciones.php')
                 .then(response => response.json())
                 .then(data => {
                     const ubicacionSelect = document.getElementById('ubicacion');
@@ -80,10 +84,9 @@
 
     <!-- Lógica de login y registro -->
     <script>
-        window.history.forward(); // Esto empuja al usuario adelante en el historial
+        window.history.forward();
     </script>
     <script src="js/LogIn.js"></script>
 
 </body>
 </html>
-

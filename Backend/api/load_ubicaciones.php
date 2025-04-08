@@ -1,6 +1,6 @@
 <?php
 header('Content-Type: application/json');
-include 'conexion.php';
+include_once 'conexion.php';
 
 $sql = "SELECT id, ciudad, ubicacion FROM ubicacion";
 $result = $conn->query($sql);
@@ -18,4 +18,4 @@ if ($result->num_rows > 0) {
 
 echo json_encode($ubicaciones);
 $conn->close();
-?>
+

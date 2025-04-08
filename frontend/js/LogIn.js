@@ -9,7 +9,7 @@ function login() {
         return;
     }
 
-    fetch('api/login.php', {
+    fetch('../Backend/api/login.php', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username, password })
@@ -46,7 +46,7 @@ function register() {
         return;
     }
 
-    fetch('api/registrar_usuario.php', {
+    fetch('Backend/api/register_user.php', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ nombre, apellido, cedula, email, username, password, rol_id, ubicacion_id })

@@ -1,12 +1,7 @@
 <?php
 header('Content-Type: application/json');
 
-$host = 'localhost';
-$usuario = 'evidences';
-$password = '12345';
-$bd = 'retibo';
-
-$conn = new mysqli($host, $usuario, $password, $bd);
+include_once 'conexion.php';
 
 if ($conn->connect_error) {
     echo json_encode(['error' => 'Error de conexión: ' . $conn->connect_error]);
@@ -24,4 +19,4 @@ while ($row = $result->fetch_assoc()) {
 
 echo json_encode($roles);
 $conn->close();
-?>
+
