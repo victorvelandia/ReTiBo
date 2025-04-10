@@ -14,7 +14,7 @@ if (session_status() === PHP_SESSION_NONE) {
   <link rel="stylesheet" href="css/record.css" />
 </head>
 <body>
-<?php include_once 'menu.php';?>
+<?php require_once 'menu.php';?>
   <div class="container">
     <h1>Registro de Inseminación Bovinos</h1>
     <form id="registroForm">
@@ -40,7 +40,7 @@ if (session_status() === PHP_SESSION_NONE) {
     <h2>Registros Guardados</h2>
     <ul id="listaRegistros"></ul>
   </div>
-  <?php include_once 'footer.php';?>
+  <?php require_once 'footer.php';?>
   <script src="js/security.js"></script>
 
   <script src="js/record.js"></script>

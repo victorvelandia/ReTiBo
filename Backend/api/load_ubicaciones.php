@@ -1,6 +1,6 @@
 <?php
 header('Content-Type: application/json');
-include_once 'conexion.php';
+require_once 'conexion.php';
 
 $sql = "SELECT id, ciudad, ubicacion FROM ubicacion";
 $result = $conn->query($sql);

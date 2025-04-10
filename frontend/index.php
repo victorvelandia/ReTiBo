@@ -13,7 +13,7 @@ if (session_status() === PHP_SESSION_NONE) {
 </head>
 <body>
 
-  <?php include_once 'menu.php'; ?>
+  <?php require_once 'menu.php'; ?>
 
   <main>
     <!-- Sección de bienvenida -->
@@ -50,7 +50,7 @@ if (session_status() === PHP_SESSION_NONE) {
     </section>
   </main>
 
-  <?php include_once 'footer.php'; ?>
+  <?php require_once 'footer.php'; ?>
   <script src="js/security.js"></script>
   <script src="js/java.js"></script>
 </body>

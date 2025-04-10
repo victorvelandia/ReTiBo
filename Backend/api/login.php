@@ -1,8 +1,9 @@
 <?php
 header("Content-Type: application/json");
 session_start();
-include_once 'conexion.php';
+require_once 'conexion.php';
 
+#decode - convertir de JSON a ARRAY
 $data = json_decode(file_get_contents("php://input"), true);
 $username = $conn->real_escape_string($data['username']);
 $password = $data['password'];
@@ -15,6 +16,7 @@ if ($result && $result->num_rows === 1) {
     if (password_verify($password, $user['password'])) {
         $_SESSION['usuario_id'] = $user['id'];
         $_SESSION['usuario_nombre'] = $user['nombre']; // 👈 Se guarda el nombre
+        //encode - convertir de ARRAY a JSON
         echo json_encode(['success' => true]);
     } else {
         echo json_encode(['error' => 'Contraseña incorrecta']);
