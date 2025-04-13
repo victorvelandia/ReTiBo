@@ -1,4 +1,6 @@
-/* Reset básico */
+/* -------------------------------
+   🧼 Reset básico
+---------------------------------- */
 * {
   margin: 0;
   padding: 0;
@@ -6,37 +8,43 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Colores principales */
+/* -------------------------------
+   🎨 Variables globales de color
+---------------------------------- */
 :root {
-  --verde-principal: #2e7d32;
-  --verde-claro: #81c784;
-  --verde-oscuro: #1b5e20;
-  --blanco: #fff;
-  --gris: #f4f4f4;
+  --verde-principal: #2e7d32;   /* Verde oscuro, tono principal */
+  --verde-claro: #81c784;       /* Verde claro para botones y acentos */
+  --verde-oscuro: #1b5e20;      /* Verde muy oscuro para contrastes */
+  --blanco: #fff;               /* Blanco puro */
+  --gris: #f4f4f4;              /* Gris claro para secciones secundarias */
 }
 
-/* Fondo general */
+/* -------------------------------
+   🌍 Estilos generales del body
+---------------------------------- */
 body {
-  background: linear-gradient(145deg, var(--verde-claro), var(--verde-principal));
-  color: var(--blanco);
-  min-height: 100vh;
+  background: linear-gradient(145deg, var(--verde-claro), var(--verde-principal)); /* Fondo degradado */
+  color: var(--blanco); /* Texto principal en blanco */
+  min-height: 100vh; /* Altura mínima pantalla completa */
 }
 
-/* Hero principal con imagen de fondo */
+/* -------------------------------
+   🏞️ Sección de bienvenida (hero)
+---------------------------------- */
 .inicio-hero {
   padding: 80px 20px;
   text-align: center;
-  background: linear-gradient(rgba(27, 94, 32, 0.5), rgba(27, 94, 32, 0.5)), 
-              url('../img/in_vitro.png') center/cover no-repeat;
-  animation: fadeIn 2s ease-in;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-  color: #fff;
+  background: 
+    linear-gradient(rgba(27, 94, 32, 0.5), rgba(27, 94, 32, 0.5)), /* Filtro verde translúcido */
+    url('../img/in_vitro.png') center/cover no-repeat;            /* Imagen de fondo centrada */
+  animation: fadeIn 2s ease-in;  /* Animación de entrada */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Sombra externa */
+  color: #fff; /* Asegura texto blanco legible */
 }
-
 
 .inicio-contenido h1 {
   font-size: 3em;
-  animation: blink 2s infinite alternate;
+  animation: blink 2s infinite alternate; /* Parpadeo suave */
 }
 
 .inicio-contenido p {
@@ -44,6 +52,9 @@ body {
   margin-top: 10px;
 }
 
+/* -------------------------------
+   🔘 Botón principal
+---------------------------------- */
 .btn {
   display: inline-block;
   margin-top: 25px;
@@ -59,10 +70,12 @@ body {
 
 .btn:hover {
   background-color: var(--blanco);
-  transform: scale(1.05);
+  transform: scale(1.05); /* Agranda suavemente */
 }
 
-/* Funciones destacadas */
+/* -------------------------------
+   ✨ Sección de funcionalidades
+---------------------------------- */
 .inicio-funciones {
   background-color: var(--gris);
   color: var(--verde-oscuro);
@@ -75,6 +88,7 @@ body {
   font-size: 2em;
 }
 
+/* Diseño en cuadrícula adaptable */
 .funciones-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -82,6 +96,7 @@ body {
   padding: 0 20px;
 }
 
+/* Tarjetas individuales */
 .funcion {
   background-color: var(--blanco);
   padding: 25px;
@@ -92,7 +107,7 @@ body {
 
 .funcion:hover {
   transform: translateY(-10px);
-  animation: blink-box 1.5s infinite alternate;
+  animation: blink-box 1.5s infinite alternate; /* Parpadeo en hover */
 }
 
 .funcion h3 {
@@ -100,7 +115,9 @@ body {
   color: var(--verde-principal);
 }
 
-/* Animaciones */
+/* -------------------------------
+   ✨ Animaciones
+---------------------------------- */
 @keyframes blink {
   0%   { opacity: 1; }
   100% { opacity: 0.7; }
@@ -116,18 +133,20 @@ body {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Responsive extra */
+/* -------------------------------
+   📱 Responsive para móviles
+---------------------------------- */
 @media (max-width: 600px) {
   .inicio-contenido h1 {
-    font-size: 2em;
+    font-size: 2em; /* Tamaño más pequeño en pantallas chicas */
   }
 
   .btn {
     font-size: 1em;
     padding: 10px 20px;
   }
+
+  .funciones-grid {
+    grid-template-columns: 1fr; /* Tarjetas en columna en móviles */
+  }
 }
-
-
-
-

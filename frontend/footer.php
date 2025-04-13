@@ -1,6 +1,7 @@
 <footer>
     <p>&copy; 2025 RETIBO 🐄</p>
   </footer>
+  
   <style>
     /* Footer */
 footer {
@@ -10,4 +11,5 @@ footer {
   padding: 1rem;
   margin-top: 2rem;
 }
+
 </style>
